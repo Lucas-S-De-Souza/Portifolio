@@ -1,0 +1,28 @@
+import Header from './components/Header/Header';
+import Home from './components/Home/Home';
+import Contato from './components/Contato/Contato'
+import Footer from './components/Footer/Footer';
+import Sobre from './components/Sobre/Sobre';
+import Projetos from './components/Projetos/Projetos';
+
+function App() {
+ 
+
+  return (
+    <>
+      <Header />
+
+      <Home />
+
+      <Sobre />
+
+      <Projetos />
+      
+      <Contato />
+
+      <Footer />
+    </>
+  );
+}
+
+export default App;

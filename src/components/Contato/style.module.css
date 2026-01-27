@@ -1,0 +1,122 @@
+.heading {
+  font-size: 4.5rem;
+  text-align: center;
+}
+
+.contato {
+  min-height: auto;
+  padding-bottom: 7rem;
+}
+
+.contato form {
+  max-width: 70rem;
+  margin: 1rem auto;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.contato form p {
+  font-size: 1.2rem;
+  text-align: left;
+}
+
+.subtitulo {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  color: var(--text-color);
+  opacity: 0.6; 
+}
+
+.contato form .inputBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.contato form .inputBox input,
+.contato form textarea {
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  color: var(--text-color);
+  background: var(--second-bg-color);
+  border-radius: .8rem;
+  margin: .7rem 0;
+}
+
+.contato form .inputBox input {
+  width: 100%; 
+}
+
+.contato form textarea {
+  resize: none;
+}
+
+.inputBox input,
+.contato form textarea {
+  width: 100%;
+  font-size: 1.6rem;
+  color: var(--text-color);
+  background: var(--second-bg-color);
+  border-radius: .8rem;
+  margin: .7rem 0;
+  border: 2px solid transparent; 
+  transition: all 0.3s ease; 
+  outline: none; 
+}
+
+.inputBox input:focus,
+.contato form textarea:focus {
+  border-color: var(--main-color); 
+  box-shadow: 0 0 1.5rem var(--main-color); 
+  background: transparent; 
+  transform: translateY(-2px); 
+}
+
+.btn {
+  display: inline-block;
+  padding: 1.2rem 2.8rem;
+  background: var(--main-color);
+  border-radius: 4rem;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.3), -5px -5px 15px rgba(255,255,255,0.05);
+  font-size: 1.6rem;
+  color: var(--second-bg-color);
+  letter-spacing: .1rem;
+  font-weight: 600;
+  transition: .5s ease;
+  cursor: pointer;
+  border: none;
+  margin-top: 1rem;
+}
+
+.btn:hover {
+  background: transparent;
+  color: var(--main-color);
+  outline: 2px solid var(--main-color);
+  box-shadow: none;
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+@media (max-width: 768px) {
+  .heading {
+    font-size: 3rem;
+  }
+
+  .contato form input[type="text"],
+  .contato form input[type="email"] {
+    height: 3rem; 
+    padding: 1rem;
+  }
+
+  .contato form textarea {
+    height: 15rem;
+  }
+}
+
+
+

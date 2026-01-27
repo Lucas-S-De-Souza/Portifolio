@@ -1,0 +1,113 @@
+
+.Container {
+  min-height: 100vh;
+  padding: 1rem 9% 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Content {
+  overflow: hidden; 
+}
+
+.Content h1, 
+.Content h3, 
+.Content p{
+  display: block;
+  animation: superSpeed 6s infinite ease-in-out;
+  opacity: 0; 
+}
+
+.Content h1 { animation-delay: 0s; }
+.Content h3 { animation-delay: 0.1s; }
+.Content p  { animation-delay: 0.2s; }
+
+@keyframes superSpeed {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%) skewX(30deg);
+  }
+
+  5% {
+    opacity: 1;
+    transform: translateX(0) skewX(0deg);
+  }
+
+  10%, 80% {
+    transform: translateX(0) skewX(0deg);
+  }
+  15%, 25%, 35%, 45%, 55%, 65%, 75% {
+    transform: translate(2px, 1px); 
+    text-shadow: -2px 0 #52c0eb46; 
+  }
+  20%, 30%, 40%, 50%, 60%, 70% {
+    transform: translate(-2px, -1px);
+    text-shadow: none;
+  }
+
+  85% {
+    opacity: 1;
+    transform: translateX(-20px) skewX(-10deg); 
+  }
+
+  95%, 100% {
+    opacity: 0;
+    transform: translateX(200%) skewX(-40deg); 
+  }
+}
+
+.Content h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+
+.Content h3 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin-top: 1.5rem;
+}
+
+.Content p {
+  font-size: 1.6rem;
+  margin: 2rem 0;
+}
+
+.socialicons a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  background: transparent;
+  border: 0.2rem solid var(--main-color);
+  border-radius: 50%;
+  font-size: 2rem;
+  color: var(--main-color);
+  margin: 3rem 1.5rem 3rem 0;
+  transition: 0.3
+  }
+
+  .socialicons a:hover {
+  transform: translateY(-5px);
+  color: #fff; 
+}
+
+.socialicons a.linkedin:hover {
+  background: #0077b5;
+  border-color: #0077b5;
+}
+
+.socialicons a.github:hover {
+  background: #0e0e0e;
+  border-color: #afafaf;
+}
+
+.socialicons a.whatsapp:hover {
+  background: #25d366;
+  border-color: #25d366;
+}
+
+
