@@ -13,23 +13,29 @@ const Sobre = () => {
 
           <div className={styles.text}>
             <p>
-              Olá! Sou Lucas, um estudante de Tecnologia da Informação, com
-              interesse em desenvolvimento de software e aplicações web. Gosto
-              de transformar ideias em soluções funcionais, buscando sempre
-              código limpo, organizado e escalável.
+              Olá! Sou <span>Lucas</span>, estudante de Tecnologia da Informação
+              com foco em desenvolvimento <span>Full Stack</span>, priorizando a
+              criação de interfaces modernas e performáticas no{" "}
+              <span>Front-end</span>. Minha motivação é transformar ideias
+              complexas em soluções funcionais, prezando sempre por um código
+              limpo, organizado e escalável.
             </p>
 
             <br />
 
             <p>
-              Com domínio em tecnologias <span>Front-end</span> e
-              <span> Backend</span>, transito entre a criação de interfaces
-              modernas com <span>React</span> e a construção de lógicas robustas
-              em <span>C#</span> e <span>Node.js</span>. Minha base em
-              <span> SQL</span> e <span>Kotlin</span> me permite entender o
-              ecossistema de dados e aplicações mobile, unindo a teoria da minha
-              formação em TI com projetos práticos que consolidam minha evolução
-              como desenvolvedor.
+              Embora transite por todo o ecossistema de uma aplicação, concentro
+              minha especialidade no <span>Front-end</span> com <span>React</span> e <span>TypeScript</span>,
+              garantindo tipagem robusta e interfaces dinâmicas. No <span>Back-end</span>,
+              possuo domínio em <span>Node.js</span> e <span>Java</span>, o que me permite construir
+              lógicas seguras e integrações eficientes. 
+              <br />
+              Além disso, minha base
+              em <span>SQL</span> e <span>Kotlin</span> amplia minha visão sobre gestão de dados e o
+              universo mobile. Unindo a teoria da minha formação acadêmica com
+              projetos práticos, busco constantemente consolidar minha evolução
+              como desenvolvedor, entregando aplicações que unem design
+              intuitivo a uma arquitetura de bastidores sólida.
             </p>
           </div>
         </div>

@@ -16,6 +16,11 @@
   font-family: 'Poppins', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem; 
+}
+
 body {
   background: var(--bg-color);
   color: var(--text-color);
@@ -23,11 +28,11 @@ body {
 
 section {
   min-height: 100vh;
-  padding: 10rem 9% 2rem;
+  padding: 10rem 15% 5rem;
 }
 
 .heading {
-    font-size: 4.5rem;
+    font-size: 3rem;
     text-align: center;
     margin-bottom: 5rem;
 }
