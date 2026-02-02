@@ -31,6 +31,97 @@ justify-content: center;
     line-height: 1.6;
 }
 
+.skillsContainer {
+    display: grid;
+    /* Força 3 colunas exatamente iguais em telas grandes */
+    grid-template-columns: repeat(1fr); 
+    gap: 2rem;
+    margin-top: 3rem;
+    width: 100%;
+}
+
+/* Container que envolve os sub-cards */
+.subCardsContainer {
+    display: flex;
+    flex-wrap: wrap;       /* Permite quebrar linha se não couber */
+    justify-content: center; /* Centraliza o grupo de tags */
+    align-items: center;
+    gap: 1rem;             /* Espaço entre as tags (horizontal e vertical) */
+    margin-top: 1.5rem;
+    width: 100%;           /* Garante que use todo o espaço do card pai */
+}
+
+/* Cada mini card individual */
+.subCard {
+    display: inline-flex;  /* Faz o fundo envolver apenas o conteúdo */
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 238, 255, 0.05); /* Fundo sutil */
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+    padding: 0.6rem 1.4rem;
+    border-radius: 0.8rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    white-space: nowrap;    /* Impede que o nome da tecnologia quebre ao meio */
+    transition: 0.3s ease;
+    cursor: default;
+}
+
+.subCard:hover {
+    background: var(--main-color);
+    color: #1f242d;
+    box-shadow: 0 0 1.5rem var(--main-color);
+    transform: translateY(-3px);
+}
+
+
+.skillCard {
+    background: #1f242d; /* Mesma cor dos cards de projetos */
+    padding: 3rem 2rem;
+    border-radius: 2rem;
+    border: 2px solid transparent;
+    transition: 0.4s ease;
+    
+    /* Centralização Mágica */
+    display: flex;
+    flex-direction: column;
+    align-items: center;    /* Centraliza horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    text-align: center;
+    
+    /* Garante que todos tenham a mesma altura */
+    min-height: 250px; 
+}
+
+.skillCard:hover {
+    border-color: var(--main-color);
+    transform: translateY(-10px);
+    box-shadow: 0 0 2rem var(--main-color);
+}
+
+.skillCard i {
+    font-size: 2.6rem;
+    color: var(--main-color);
+    margin-bottom: 1.5rem;
+    /* Garante que o ícone não saia do centro */
+    display: block; 
+}
+
+.skillCard h3 {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.skillCard p {
+    font-size: 1rem;
+    color: #ccc;
+    line-height: 1.6;
+    margin: 0;
+    text-indent: 0; /* Remove recuos indesejados */
+}
+
 .aboutImage {
     flex: 1 1 35rem;
     display: flex;
@@ -54,6 +145,13 @@ justify-content: center;
         gap: 2rem;
     }
 
+    .skillsContainer {
+        grid-template-columns: 1fr; /* Empilha no celular */
+        max-width: 400px; /* Evita que o card fique largo demais no mobile */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .aboutImage img {
         width: 25rem;
         height: 25rem;
@@ -62,5 +160,11 @@ justify-content: center;
     .text {
         text-align: center;
         text-indent: 0; 
+    }
+}
+
+@media (max-width: 768px) {
+    .skillsContainer {
+        grid-template-columns: 1fr; /* 1 coluna no celular */
     }
 }
