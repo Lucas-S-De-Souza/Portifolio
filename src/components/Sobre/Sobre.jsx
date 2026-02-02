@@ -38,41 +38,12 @@ const Sobre = () => {
               entregando aplicações que unem design intuitivo a uma arquitetura
               de bastidores sólida.
             </p>
-
-            <div className={styles.skillsContainer}>
-              <div className={styles.skillCard}>
-                <i className="bx bx-code-alt"></i>
-                <h3>Front-end</h3>
-                <span className={styles.subCard}>HTML</span>
-                <span className={styles.subCard}>CSS</span>
-                <span className={styles.subCard}>Typescript</span>
-                <span className={styles.subCard}>React</span>
-              </div>
-
-              <div className={styles.skillCard}>
-                <i className="bx bx-server"></i>
-                <h3>Back-end & Mobile</h3>
-                <span className={styles.subCard}>Node.js</span>
-                <span className={styles.subCard}>Kotlin</span>
-                <span className={styles.subCard}>Java</span>
-                <span className={styles.subCard}>C#</span>
-              </div>
-
-              <div className={styles.skillCard}>
-                <i className="bx bx-wrench"></i>
-                <h3>Ferramentas & DB</h3>
-                <span className={styles.subCard}>Git</span>
-                <span className={styles.subCard}>GitHub</span>
-                <span className={styles.subCard}>Firebase</span>
-                <span className={styles.subCard}>SQL</span>
-              </div>
-            </div>
           </div>
-        </div>
 
-        {/* Lado da Imagem */}
-        <div className={styles.aboutImage}>
-          <img src="/imagens/perfil.jpeg" alt="Sobre mim" />
+          {/* Lado da Imagem */}
+          <div className={styles.aboutImage}>
+            <img src="/imagens/perfil.jpeg" alt="Sobre mim" />
+          </div>
         </div>
       </div>
     </section>

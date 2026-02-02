@@ -1,0 +1,87 @@
+/* Container das Skills (Onde ficam os 3 cards principais) */
+.skillsContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 2rem;
+    margin-top: 3rem;
+    padding: 10rem 15% 5rem;
+    width: 100%;
+}
+
+/* Container interno das tags (O SEGREDO ESTÁ AQUI) */
+.subCardsContainer {
+    display: grid;
+    /* Cria 2 colunas de tamanho idêntico */
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 1rem;
+    margin-top: 1.5rem;
+    width: 100%; 
+}
+
+/* Estilo das Tags Individuais */
+.subCard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #2b303b; 
+    color: var(--main-color);
+    border: 1px solid rgba(0, 238, 255, 0.3);
+    padding: 0.8rem;
+    margin: 0.6rem;
+    border-radius: 0.8rem;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    text-align: center;
+    width: 100%; /* Garante que preencha a célula do grid */
+}
+
+.subCard:hover {
+    background: var(--main-color);
+    color: #1f242d;
+    box-shadow: 0 0 1rem var(--main-color);
+    transform: scale(1.05);
+}
+
+/* Ajuste no Card Principal para não ficar torto */
+.skillCard {
+    background: #1f242d;
+    padding: 2.5rem 2rem;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 320px; /* Aumentei um pouco para caber as tags com folga */
+}
+
+.skillCard h3 {
+    font-size: 1.3rem;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.skillCard p {
+    font-size: 1rem;
+    color: #ccc;
+    line-height: 1.6;
+    margin: 0;
+    text-indent: 0; 
+}
+
+
+@media (max-width: 991px) {
+
+    .skillsContainer {
+        grid-template-columns: 1fr; /* Empilha no celular */
+        max-width: 400px; /* Evita que o card fique largo demais no mobile */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+  }
+
+  @media (max-width: 768px) {
+    .skillsContainer {
+        grid-template-columns: 1fr; /* 1 coluna no celular */
+    }
+}
