@@ -3,9 +3,7 @@ import styles from "./style.module.css";
 const Sobre = () => {
   return (
     <section className={styles.sobre} id="sobre">
-      {/* Aqui usamos a classe que tem o display: flex */}
       <div className={styles.aboutContainer}>
-        {/* Envolvemos o título e os parágrafos em uma div de texto */}
         <div className={styles.aboutText}>
           <h2 className="heading">
             Sobre <span>Mim</span>
@@ -39,11 +37,9 @@ const Sobre = () => {
               de bastidores sólida.
             </p>
           </div>
-
-          {/* Lado da Imagem */}
-          <div className={styles.aboutImage}>
-            <img src="/imagens/perfil.jpeg" alt="Sobre mim" />
-          </div>
+        </div>
+        <div className={styles.aboutImage}>
+          <img src="/imagens/perfil.jpeg" alt="Sobre mim" />
         </div>
       </div>
     </section>

@@ -1,67 +1,66 @@
 .heading {
-display: flex;
-align-items: center;
-justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .sobre {
-    background: var(--second-bg-color);
-    padding: 10rem 15% 5rem;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
+  background: var(--second-bg-color);
+  padding: 10rem 15% 5rem;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
 .aboutContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 4rem; 
-    width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  width: 100%;
 }
 
 .aboutText {
-    flex: 1 1 50rem;
+  flex: 1 1 50rem;
 }
 
 .text {
-    font-size: 1.1rem;
-    text-indent: 2rem;
-    text-align: justify;
-    line-height: 1.6;
+  font-size: 1.1rem;
+  text-indent: 2rem;
+  text-align: justify;
+  line-height: 1.6;
 }
 
 .aboutImage {
-    flex: 1 1 35rem;
-    display: flex;
-    justify-content: center;
+  flex: 1 1 35rem;
+  display: flex;
+  justify-content: center;
 }
 
 .aboutImage img {
-    width: 20rem;
-    height: 20rem;
-    object-fit: cover;
-    border-radius: 50%;
-    border: .4rem solid var(--main-color);
-    box-shadow: 0 0 2rem var(--main-color);
-    transition: .4s ease;
+  width: 20rem;
+  height: 20rem;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 0.4rem solid var(--main-color);
+  box-shadow: 0 0 2rem var(--main-color);
+  transition: 0.4s ease;
 }
 
 @media (max-width: 991px) {
-    .aboutContainer {
-        flex-direction: column-reverse; 
-        text-align: center;
-        gap: 2rem;
-    }
+  .aboutContainer {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 2rem;
+  }
 
-    .aboutImage img {
-        width: 25rem;
-        height: 25rem;
-    }
+  .aboutImage img {
+    width: 25rem;
+    height: 25rem;
+  }
 
-    .text {
-        text-align: center;
-        text-indent: 0; 
-    }
+  .text {
+    text-align: center;
+    text-indent: 0;
+  }
 }
-
