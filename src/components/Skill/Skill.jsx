@@ -1,45 +1,61 @@
+import { useState } from 'react';
 import styles from "./style.module.css";
+
+const SkillCard = ({ icone, titulo, tecnologias }) => {
+  const [isFlipped, setIsFlipped] = useState(false);
+
+  return (
+    <div 
+      className={`${styles.skillCardContainer} ${isFlipped ? styles.flipped : ""}`}
+      onClick={() => setIsFlipped(!isFlipped)}
+    >
+      <div className={styles.skillCardInner}>
+        {/* PARTE DA FRENTE */}
+        <div className={styles.skillCardFront}>
+          <i className={`bx ${icone}`}></i>
+          <h3>{titulo}</h3>
+          <div className={styles.flipArrow}>
+            <i className='bx bx-rotate-right'></i> {/* Ícone de seta para girar */}
+          </div>
+        </div>
+
+        {/* PARTE DE TRÁS */}
+        <div className={styles.skillCardBack}>
+          <h3>Tecnologias</h3>
+          <div className={styles.subCardsContainer}>
+            {tecnologias.map((tech, index) => (
+              <span key={index} className={styles.subCard}>{tech}</span>
+            ))}
+          </div>
+          <div className={styles.flipArrow}>
+            <i className='bx bx-undo'></i> {/* Seta para voltar */}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 const Skill = () => {
   return (
     <div className={styles.skillsWrapper}>
-      <h2 className="heading">
-        Minhas <span>Habilidades</span>
-      </h2>
-
+      <h2 className={styles.heading}>Minhas <span>Habilidades</span></h2>
       <div className={styles.skillsContainer}>
-        <div className={styles.skillCard}>
-          <i className="bx bx-code-alt"></i>
-          <h3>Front-end</h3>
-          <div className={styles.subCardsContainer}>
-            <span className={styles.subCard}>HTML</span>
-            <span className={styles.subCard}>CSS</span>
-            <span className={styles.subCard}>Typescript</span>
-            <span className={styles.subCard}>React</span>
-          </div>
-        </div>
-
-        <div className={styles.skillCard}>
-          <i className="bx bx-server"></i>
-          <h3>Back-end & Mobile</h3>
-          <div className={styles.subCardsContainer}>
-            <span className={styles.subCard}>Node.js</span>
-            <span className={styles.subCard}>Kotlin</span>
-            <span className={styles.subCard}>Java</span>
-            <span className={styles.subCard}>C#</span>
-          </div>
-        </div>
-
-        <div className={styles.skillCard}>
-          <i className="bx bx-wrench"></i>
-          <h3>Ferramentas & DB</h3>
-          <div className={styles.subCardsContainer}>
-            <span className={styles.subCard}>Git</span>
-            <span className={styles.subCard}>GitHub</span>
-            <span className={styles.subCard}>Firebase</span>
-            <span className={styles.subCard}>SQL</span>
-          </div>
-        </div>
+        <SkillCard 
+          icone="bx-code-alt" 
+          titulo="Front-end" 
+          tecnologias={["HTML", "CSS", "Typescript", "React"]} 
+        />
+        <SkillCard 
+          icone="bx-server" 
+          titulo="Back-end & Mobile" 
+          tecnologias={["Node.js", "Kotlin", "Java", "C#"]} 
+        />
+        <SkillCard 
+          icone="bx-wrench" 
+          titulo="Ferramentas & DB" 
+          tecnologias={["Git", "GitHub", "Firebase", "SQL"]} 
+        />
       </div>
     </div>
   );
