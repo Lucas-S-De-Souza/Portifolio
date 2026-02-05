@@ -11,7 +11,7 @@ const Home = () => {
         <div className={styles.socialicons}>
           <a href="https://www.linkedin.com/in/lucas-santana-394a9b2a5" className={styles.linkedin} aria-label='LinkedIn'><i className='bx bxl-linkedin'></i></a>
           <a href="https://github.com/Lucas-S-De-Souza" className={styles.github} aria-label='GitHub'><i className='bx bxl-github'></i></a>
-          <a href="#" className={styles.whatsapp} aria-label='WhatsApp'><i className='bx bxl-whatsapp'></i></a>
+          <a href="https://wa.me/5513996849496" className={styles.whatsapp} aria-label='WhatsApp'><i className='bx bxl-whatsapp'></i></a>
         </div>
       </div>      
     </section>
