@@ -1,45 +1,30 @@
 import styles from "./style.module.css";
+import { profile } from "../../data/profile";
 
 const Sobre = () => {
   return (
     <section className={styles.sobre} id="sobre">
       <div className={styles.aboutContainer}>
         <div className={styles.aboutText}>
-          <h2 className="heading">
+          <h2 className="heading reveal">
             Sobre <span>Mim</span>
           </h2>
 
-          <div className={styles.text}>
-            <p>
-              Olá! Sou <span>Lucas</span>, estudante de Tecnologia da Informação
-              com foco em desenvolvimento <span>Full Stack</span>, priorizando a
-              criação de interfaces modernas e performáticas no{" "}
-              <span>Front-end</span>. Minha motivação é transformar ideias
-              complexas em soluções funcionais, prezando sempre por um código
-              limpo, organizado e escalável.
-            </p>
-
-            <br />
-
-            <p>
-              Embora transite por todo o ecossistema de uma aplicação, concentro
-              minha especialidade no <span>Front-end</span> com{" "}
-              <span>React</span> e <span>TypeScript</span>, garantindo tipagem
-              robusta e interfaces dinâmicas. No <span>Back-end</span>, possuo
-              domínio em <span>Node.js</span> e <span>Java</span>, o que me
-              permite construir lógicas seguras e integrações eficientes.
-              <br />
-              Além disso, minha base em <span>SQL</span> e <span>Kotlin</span>{" "}
-              amplia minha visão sobre gestão de dados e o universo mobile.
-              Unindo a teoria da minha formação acadêmica com projetos práticos,
-              busco constantemente consolidar minha evolução como desenvolvedor,
-              entregando aplicações que unem design intuitivo a uma arquitetura
-              de bastidores sólida.
-            </p>
+          <div className={`${styles.text} reveal`}>
+            {profile.about.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
+            <p className={styles.availability}>{profile.availability}</p>
           </div>
         </div>
-        <div className={styles.aboutImage}>
-          <img src="/imagens/perfil.jpeg" alt="Sobre mim" />
+
+        <div className={`${styles.aboutImage} reveal`}>
+          <img
+            src="/imagens/perfil.jpeg"
+            alt="Foto de Lucas Santana"
+            width="320"
+            height="320"
+          />
         </div>
       </div>
     </section>

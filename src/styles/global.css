@@ -11,19 +11,33 @@
   box-sizing: border-box;
   text-decoration: none;
   border: none;
-  outline: none;
-  scroll-behavior: smooth;
-  font-family: 'Poppins', sans-serif;
 }
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 5rem; 
+  scroll-padding-top: 5rem;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
   background: var(--bg-color);
   color: var(--text-color);
+  font-family: inherit;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+/* Antes "outline: none" apagava o foco do teclado em todo o site */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--main-color);
+  outline-offset: 3px;
 }
 
 section {
@@ -32,34 +46,52 @@ section {
 }
 
 .heading {
-    font-size: 3rem;
-    text-align: center;
-    margin-bottom: 5rem;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 5rem;
 }
 
 span {
   color: var(--main-color);
 }
 
+/* Texto só para leitores de tela */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+/* Aparecer ao rolar (ver src/hooks/useReveal.js) */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition-delay: var(--delay, 0ms);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
 @media (max-width: 768px) {
-  .heading {
-    font-size: 3rem;
-  }
-  
   html {
-    font-size: 80%; 
-  }
-
-}
-
-@media (max-width: 450px) {
-  .header {
-    padding: 1.5rem 2%;
-  }
-  
-  .contato form .inputBox input {
-    width: 100%;
+    font-size: 80%;
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

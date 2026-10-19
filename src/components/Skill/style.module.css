@@ -1,162 +1,170 @@
-.heading {
-  font-size: 3rem;
-  text-align: center;
+.skills {
+  min-height: auto;
+}
+
+.skills :global(.heading) {
   margin-bottom: 2rem;
 }
 
-.skillsWrapper {
-  width: 100%;
-  margin-top: 4rem;
-}
-
-.skillsContainer {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  padding: 4em;
-  width: 100%;
-}
-
-.skillCardContainer {
-  background-color: transparent;
-  width: 100%;
-  height: 350px; /* Altura fixa necessária para o efeito */
-  perspective: 1000px;
-  cursor: pointer;
-}
-
-.skillCardInner {
-  position: relative;
-  width: 100%;
-  height: 100%;
+.intro {
   text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-}
-
-.skillCardContainer.flipped .skillCardInner {
-  transform: rotateY(180deg);
-}
-
-/* Estilo comum para frente e verso */
-.skillCardFront,
-.skillCardBack {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden; /* Esconde o verso quando vira */
-  backface-visibility: hidden;
-  border-radius: 2rem;
-  background: #1f242d;
-  border: 2px solid var(--main-color);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
-}
-
-/* Estilo específico do Verso */
-.skillCardBack {
-  transform: rotateY(180deg); /* Já começa virado */
-}
-
-/* Ícone de seta para indicar o clique */
-.flipArrow {
-  position: absolute;
-  bottom: 1.5rem;
-  right: 1.5rem;
-  font-size: 2rem;
-  color: var(--main-color);
-  opacity: 0.6;
-  animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-/* Reutilize seu grid de subCards aqui dentro */
-.subCardsContainer {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0.8rem;
-  width: 100%;
-  margin-top: 1rem;
-}
-
-.subCard {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #2b303b;
-  color: var(--main-color);
-  border: 1px solid rgba(0, 238, 255, 0.3);
-  padding: 0.8rem;
-
-  border-radius: 0.8rem;
-  font-size: 1rem;
-  font-weight: 500;
-  transition: 0.3s ease;
-  text-align: center;
-  width: 100%;
-}
-
-.subCard:hover {
-  background: var(--main-color);
-  color: #1f242d;
-  box-shadow: 0 0 1rem var(--main-color);
-  transform: scale(1.05);
-}
-
-.skillCard {
-  background: #1f242d;
-  padding: 2.5rem 1.5rem;
-  border-radius: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 2px solid transparent;
-}
-
-.skillCard h3 {
-  font-size: 1.3rem;
-  color: #fff;
-  margin-bottom: 1rem;
-}
-
-.skillCard p {
-  font-size: 1rem;
-  color: #ccc;
+  max-width: 55rem;
+  margin: 0 auto 4rem;
+  color: #bbb;
   line-height: 1.6;
-  margin: 0;
-  text-indent: 0;
+}
+
+.legendDot {
+  display: inline-block;
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  background: var(--main-color);
+  vertical-align: middle;
+}
+
+/* Layout "bento": cards de tamanhos diferentes */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-flow: dense;
+  gap: 1.8rem;
+}
+
+.wide {
+  grid-column: span 2;
+}
+
+.card {
+  background: linear-gradient(145deg, #1b212b, #151a22);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 1.6rem;
+  padding: 1.8rem;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.card:hover {
+  border-color: rgba(0, 238, 255, 0.4);
+  transform: translateY(-4px);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.6rem;
+}
+
+.groupIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 0.9rem;
+  background: rgba(0, 238, 255, 0.12);
+  color: var(--main-color);
+  font-size: 1.5rem;
+}
+
+.cardHeader h3 {
+  font-size: 1.15rem;
+  color: #fff;
+}
+
+.list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(5.5rem, 1fr));
+  gap: 0.8rem;
+}
+
+.tile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 1rem 0.4rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  opacity: 0;
+  transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+}
+
+/* Os ícones aparecem em sequência quando o card entra na tela */
+.card:global(.visible) .tile {
+  animation: pop 0.45s ease both;
+  animation-delay: calc(var(--i) * 60ms + 150ms);
+}
+
+@keyframes pop {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.tile:hover {
+  transform: translateY(-3px);
+  background: rgba(0, 238, 255, 0.08);
+  border-color: rgba(0, 238, 255, 0.4);
+}
+
+.icon {
+  font-size: 2.4rem;
+  line-height: 1;
+  color: #cfd6e0;
+  transition: color 0.25s ease;
+}
+
+.tile:hover .icon {
+  color: var(--main-color);
+}
+
+.label {
+  font-size: 0.8rem;
+  color: #aab2bf;
+  text-align: center;
+  line-height: 1.3;
+}
+
+.used::after {
+  content: "";
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--main-color);
 }
 
 @media (max-width: 991px) {
-  .skillsContainer {
-    grid-template-columns: 1fr;
-    padding: 4rem 25%;
-    justify-content: center;
-    justify-items: center;
-  }
-
-  .skillCard {
-    width: 100%;
-    max-width: 400px;
+  .wide {
+    grid-column: auto;
   }
 }
 
-@media (max-width: 768px) {
-  .heading {
-    font-size: 2.2rem;
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .tile,
+  .icon {
+    transition: none;
+  }
+  .tile {
+    opacity: 1;
+  }
+  .card:global(.visible) .tile {
+    animation: none;
+  }
+  .card:hover,
+  .tile:hover {
+    transform: none;
   }
 }

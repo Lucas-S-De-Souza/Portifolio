@@ -5,9 +5,10 @@ import Footer from './components/Footer/Footer';
 import Sobre from './components/Sobre/Sobre';
 import Projetos from './components/Projetos/Projetos';
 import Skill from './components/Skill/Skill';
+import useReveal from './hooks/useReveal';
 
 function App() {
- 
+  useReveal();
 
   return (
     <>

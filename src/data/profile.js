@@ -6,6 +6,7 @@
 
 export const profile = {
   name: "Lucas Santana de Souza",
+  displayName: "Lucas Santana",
   role: "Desenvolvedor Web Júnior",
   tagline:
     "Front-end com React, Next.js e TypeScript, com experiência prática em full stack.",
@@ -21,6 +22,7 @@ export const profile = {
     // Atualize aqui se você trocar a URL personalizada do LinkedIn.
     linkedin: "https://www.linkedin.com/in/lucas-santana-394a9b2a5",
     email: "mailto:lucassantana0503@gmail.com",
+    whatsapp: "https://wa.me/5513996849496",
   },
 };
 
@@ -73,8 +75,32 @@ export const projects = [
     highlights: [],
     stack: ["JavaScript", "HTML", "CSS", "Gemini API"],
     repo: "https://github.com/Lucas-S-De-Souza/assistente-games",
-    demo: null,
-    image: null,
+    demo: "https://lucas-s-de-souza.github.io/assistente-games/",
+    image: "/imagens/asst-games.png",
+  },
+];
+
+// Exercícios e projetos de estudo (aparecem em uma área menor do portfólio).
+export const studyProjects = [
+  {
+    id: "projeto-social",
+    title: "Redes Sociais",
+    summary:
+      "Simulação de uma interface de smartphone no navegador, com telas que representam redes sociais.",
+    stack: ["HTML", "CSS"], // se também usa JavaScript, acrescente aqui
+    repo: "https://github.com/Lucas-S-De-Souza/projeto-social",
+    demo: "https://lucas-s-de-souza.github.io/projeto-social/",
+    image: "/imagens/pj-social.png",
+  },
+  {
+    id: "projeto-site",
+    title: "Projeto Site",
+    summary:
+      "Primeiro site, feito no curso de HTML e CSS do Curso em Vídeo, com foco em estrutura semântica e estilos.",
+    stack: ["HTML", "CSS"],
+    repo: "https://github.com/Lucas-S-De-Souza/projeto-site",
+    demo: "https://lucas-s-de-souza.github.io/projeto-site/",
+    image: "/imagens/pj-site.png",
   },
 ];
 

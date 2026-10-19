@@ -1,12 +1,5 @@
-.heading {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .sobre {
   background: var(--second-bg-color);
-  padding: 10rem 15% 5rem;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -26,9 +19,17 @@
 
 .text {
   font-size: 1.1rem;
-  text-indent: 2rem;
-  text-align: justify;
-  line-height: 1.6;
+  line-height: 1.7;
+  color: #ddd;
+}
+
+.text p + p {
+  margin-top: 1.2rem;
+}
+
+.availability {
+  color: var(--main-color);
+  font-weight: 600;
 }
 
 .aboutImage {
@@ -42,25 +43,21 @@
   height: 20rem;
   object-fit: cover;
   border-radius: 50%;
-  border: 0.4rem solid var(--main-color);
-  box-shadow: 0 0 2rem var(--main-color);
-  transition: 0.4s ease;
+  border: 0.3rem solid var(--main-color);
 }
 
 @media (max-width: 991px) {
   .aboutContainer {
     flex-direction: column-reverse;
-    text-align: center;
     gap: 2rem;
   }
 
   .aboutImage img {
-    width: 25rem;
-    height: 25rem;
+    width: 18rem;
+    height: 18rem;
   }
 
   .text {
     text-align: center;
-    text-indent: 0;
   }
 }
