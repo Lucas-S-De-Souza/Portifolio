@@ -1,7 +1,6 @@
 import styles from "./style.module.css";
 import { skills, projectsUsing } from "../../data/profile";
 
-// Ícone de cada tecnologia (Devicon e Boxicons). Sem ícone, o texto continua aparecendo.
 const TECH_ICONS = {
   React: "devicon-react-original",
   "Next.js": "devicon-nextjs-plain",

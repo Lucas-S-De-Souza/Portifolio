@@ -31,7 +31,6 @@ textarea {
   font: inherit;
 }
 
-/* Antes "outline: none" apagava o foco do teclado em todo o site */
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
@@ -55,7 +54,6 @@ span {
   color: var(--main-color);
 }
 
-/* Texto só para leitores de tela */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -65,7 +63,6 @@ span {
   white-space: nowrap;
 }
 
-/* Aparecer ao rolar (ver src/hooks/useReveal.js) */
 .reveal {
   opacity: 0;
   transform: translateY(24px);

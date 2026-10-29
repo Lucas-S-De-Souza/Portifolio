@@ -1,9 +1,3 @@
-// src/data/profile.js
-// Fonte única do conteúdo do portfólio. Os componentes leem daqui,
-// então atualizar um projeto ou link é mexer em um lugar só.
-// Tudo abaixo vem do seu currículo, GitHub e conversas anteriores.
-// Onde não há dado real (demo, imagens), o valor é null: nada é inventado.
-
 export const profile = {
   name: "Lucas Santana de Souza",
   displayName: "Lucas Santana",
@@ -19,7 +13,6 @@ export const profile = {
   ],
   links: {
     github: "https://github.com/Lucas-S-De-Souza",
-    // Atualize aqui se você trocar a URL personalizada do LinkedIn.
     linkedin: "https://www.linkedin.com/in/lucas-santana-394a9b2a5",
     email: "mailto:lucassantana0503@gmail.com",
     whatsapp: "https://wa.me/5513996849496",
@@ -43,8 +36,8 @@ export const projects = [
     ],
     stack: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Tailwind CSS", "Stripe", "Resend"],
     repo: "https://github.com/Lucas-S-De-Souza/personal-trainer-platform",
-    demo: null, // adicione o link quando houver deploy
-    image: null, // adicione um print real em /public quando tiver
+    demo: null, // adicionar o link quando houver deploy
+    image: null, // adicionar um print real em /public
   },
   {
     id: "crud-fullstack-produtos",
@@ -80,14 +73,13 @@ export const projects = [
   },
 ];
 
-// Exercícios e projetos de estudo (aparecem em uma área menor do portfólio).
 export const studyProjects = [
   {
     id: "projeto-social",
     title: "Redes Sociais",
     summary:
       "Simulação de uma interface de smartphone no navegador, com telas que representam redes sociais.",
-    stack: ["HTML", "CSS"], // se também usa JavaScript, acrescente aqui
+    stack: ["HTML", "CSS"], 
     repo: "https://github.com/Lucas-S-De-Souza/projeto-social",
     demo: "https://lucas-s-de-souza.github.io/projeto-social/",
     image: "/imagens/pj-social.png",
@@ -104,7 +96,6 @@ export const studyProjects = [
   },
 ];
 
-// Categorias e tecnologias reais. Sem porcentagens nem "níveis".
 export const skills = [
   {
     group: "Front-end",
@@ -128,8 +119,6 @@ export const skills = [
   },
 ];
 
-// Liga cada tecnologia aos projetos em que ela aparece.
-// Ex.: projectsUsing("React") -> projetos cuja "stack" inclui React.
 export function projectsUsing(skill) {
   return projects.filter((project) => project.stack.includes(skill));
 }

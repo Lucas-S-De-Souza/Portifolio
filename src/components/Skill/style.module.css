@@ -23,7 +23,6 @@
   vertical-align: middle;
 }
 
-/* Layout "bento": cards de tamanhos diferentes */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -93,7 +92,6 @@
   transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease;
 }
 
-/* Os ícones aparecem em sequência quando o card entra na tela */
 .card:global(.visible) .tile {
   animation: pop 0.45s ease both;
   animation-delay: calc(var(--i) * 60ms + 150ms);

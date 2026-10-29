@@ -20,7 +20,6 @@
 .Content > *:nth-child(5) { animation-delay: 360ms; }
 .Content > *:nth-child(6) { animation-delay: 450ms; }
 
-/* Entrada única (antes o texto se repetia e sumia a cada 6 segundos) */
 @keyframes enter {
   from {
     opacity: 0;

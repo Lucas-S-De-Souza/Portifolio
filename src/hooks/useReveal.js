@@ -1,7 +1,5 @@
 import { useEffect } from "react";
 
-// Faz os elementos com a classe "reveal" aparecerem suavemente ao entrar na tela.
-// Cada elemento anima uma única vez. Sem IntersectionObserver, tudo já aparece.
 export default function useReveal() {
   useEffect(() => {
     const elements = document.querySelectorAll(".reveal");
