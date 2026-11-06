@@ -1,0 +1,9 @@
+node_modules/
+dist/
+*.local
+*.zip
+.env
+.env.*
+npm-debug.log*
+.vscode/
+.idea/
