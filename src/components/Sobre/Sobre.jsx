@@ -20,7 +20,7 @@ const Sobre = () => {
 
         <div className={`${styles.aboutImage} reveal`}>
           <img
-            src="/imagens/perfil.jpeg"
+            src={`${import.meta.env.BASE_URL}imagens/perfil.jpeg`}
             alt="Foto de Lucas Santana"
             width="320"
             height="320"

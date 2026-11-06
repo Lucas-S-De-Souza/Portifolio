@@ -69,7 +69,7 @@ export const projects = [
     stack: ["JavaScript", "HTML", "CSS", "Gemini API"],
     repo: "https://github.com/Lucas-S-De-Souza/assistente-games",
     demo: "https://lucas-s-de-souza.github.io/assistente-games/",
-    image: "/imagens/asst-games.png",
+    image: `${import.meta.env.BASE_URL}imagens/asst-games.png`,
   },
 ];
 
@@ -82,7 +82,7 @@ export const studyProjects = [
     stack: ["HTML", "CSS"], 
     repo: "https://github.com/Lucas-S-De-Souza/projeto-social",
     demo: "https://lucas-s-de-souza.github.io/projeto-social/",
-    image: "/imagens/pj-social.png",
+    image: `${import.meta.env.BASE_URL}imagens/pj-social.png`,
   },
   {
     id: "projeto-site",
@@ -92,7 +92,7 @@ export const studyProjects = [
     stack: ["HTML", "CSS"],
     repo: "https://github.com/Lucas-S-De-Souza/projeto-site",
     demo: "https://lucas-s-de-souza.github.io/projeto-site/",
-    image: "/imagens/pj-site.png",
+    image: `${import.meta.env.BASE_URL}imagens/pj-site.png`,
   },
 ];
 
